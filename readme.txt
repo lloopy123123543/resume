@@ -5,7 +5,4 @@ npx supabase gen types typescript --project-id czzqyykarddnpjzczhtc --schema pub
 npm install @supabase/auth-helpers-nextjs @supabase/supabase-js
 npm i @supabase/auth-helpers-react
 npm i stripe
-<<<<<<< HEAD
-npm install @radix-ui/dialog
-=======
->>>>>>> 0e515f516c4781003b72d9010f4072ac9919924f
+npm install @radix-ui/react-alert-dialog
