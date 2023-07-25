@@ -1,17 +1,33 @@
 "use client";
 import useAuthModal from "@/hooks/useAuthModal";
+import { useUser } from "@/hooks/useUser";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
 export default function Header() {
   const [UserIs, setUserIs] = useState(false);
   const [HeaderMenu, setHeaderMenu] = useState(false);
   const AuthModal = useAuthModal()
+  const supabaseClient = useSupabaseClient();
+  const router = useRouter();
+  const {user, subscription} = useUser();
+
+  const handleLogout = async () => {
+    const {error } = await supabaseClient.auth.signOut();
+
+    router.refresh();
+
+    if(error) {
+      console.log(error)
+    }
+  }
   return (
     <div className=" p-2 bg-sky-600 w-full mx-auto flex justify-between">
       <div>Logo</div>
-      {UserIs ? (
+      {user ? (
         <div className="flex justify-center items-center gap-5">
           <Link href={"/sing_out"}>
             <div>Sign out</div>
