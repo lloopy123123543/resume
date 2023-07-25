@@ -1,4 +1,4 @@
-import * as Dialog from "@radix-ui/react-alert-dialog";
+import * as Dialog from "@radix-ui/react-dialog";
 
 interface ModalProps {
   isOpen: boolean;
@@ -48,7 +48,13 @@ const Modal: React.FC<ModalProps> = ({
         focus:outline-none
         "
       >
-        <Dialog.Title>{title}</Dialog.Title>
+        <Dialog.Title
+        className="text-white text-xl text-center font-bold mt-2">{title}</Dialog.Title>
+        <Dialog.Description className="text-slate-100 font-semibold text-center">{description}</Dialog.Description>
+        <div className="text-center font-bold text-white">{children}</div>
+        <Dialog.Close asChild>
+            <button className="text-white font-bold border-none">close</button>
+        </Dialog.Close>
       </Dialog.Content>
       </Dialog.Portal>
 
