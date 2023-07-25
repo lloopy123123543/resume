@@ -8,3 +8,4 @@ npm i stripe
 npm install @radix-ui/react-dialog
 npm i zustand
 npm i @supabase/auth-ui-react
+npm i @supabase/auth-ui-shared
