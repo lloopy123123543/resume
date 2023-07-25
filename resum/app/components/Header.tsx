@@ -28,10 +28,12 @@ export default function Header() {
     <div className=" p-2 bg-sky-600 w-full mx-auto flex justify-between">
       <div>Logo</div>
       {user ? (
-        <div className="flex justify-center items-center gap-5">
-          <Link href={"/sing_out"}>
-            <div>Sign out</div>
-          </Link>
+        <div
+         className="flex justify-center items-center gap-5">
+            <div
+            className="cursor-pointer"
+             onClick={() => handleLogout()}
+            >Sign out</div>
           <Image
           alt="avatar"
             className="rounded-full cursor-pointer"
