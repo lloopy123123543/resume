@@ -5,4 +5,3 @@ npx supabase gen types typescript --project-id czzqyykarddnpjzczhtc --schema pub
 npm install @supabase/auth-helpers-nextjs @supabase/supabase-js
 npm i @supabase/auth-helpers-react
 npm i stripe
-Да, я делаю это ради того, чтобы не сбить стрик коммитов, что ты будешь с этим делать?
