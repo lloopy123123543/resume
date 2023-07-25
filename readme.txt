@@ -7,3 +7,4 @@ npm i @supabase/auth-helpers-react
 npm i stripe
 npm install @radix-ui/react-dialog
 npm i zustand
+npm i @supabase/auth-ui-react
