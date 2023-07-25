@@ -1,11 +1,13 @@
 "use client";
+import useAuthModal from "@/hooks/useAuthModal";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
-  const [UserIs, setUserIs] = useState(true);
+  const [UserIs, setUserIs] = useState(false);
   const [HeaderMenu, setHeaderMenu] = useState(false);
+  const AuthModal = useAuthModal()
   return (
     <div className=" p-2 bg-sky-600 w-full mx-auto flex justify-between">
       <div>Logo</div>
@@ -39,7 +41,10 @@ export default function Header() {
           )}
         </div>
       ) : (
-        <div>Sign in</div>
+        <div
+        className="cursor-pointer hover:text-white"
+        onClick={AuthModal.onOpen}
+        >Sign in</div>
       )}
     </div>
   );
