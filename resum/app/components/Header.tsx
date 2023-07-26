@@ -8,7 +8,6 @@ import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
 export default function Header() {
-  const [UserIs, setUserIs] = useState(false);
   const [HeaderMenu, setHeaderMenu] = useState(false);
   const AuthModal = useAuthModal()
   const supabaseClient = useSupabaseClient();
@@ -30,10 +29,7 @@ export default function Header() {
       {user ? (
         <div
          className="flex justify-center items-center gap-5">
-            <div
-            className="cursor-pointer"
-             onClick={() => handleLogout()}
-            >Sign out</div>
+            <div>{user.email}</div>
           <Image
           alt="avatar"
             className="rounded-full cursor-pointer"
@@ -46,9 +42,10 @@ export default function Header() {
           ></Image>
           {HeaderMenu && (
             <div className="absolute mt-40 bg-white p-2 rounded-lg grid gap-3">
-              <Link href={"/sus"}>
-                <div>Lorem</div>
-              </Link>
+            <div
+            className="cursor-pointer"
+             onClick={() => handleLogout()}
+            >Sign out</div>
               <Link href={"/sus"}>
                 <div>Lorem</div>
               </Link>
