@@ -24,7 +24,7 @@ export default function Header() {
     }
   }
   return (
-    <div className=" p-2 bg-[#F5AE33]  backdrop-blur-sm w-full mx-auto flex justify-between">
+    <div className=" p-2 bg-[#F5AE33] backdrop-blur-sm w-full mx-auto flex justify-between">
       <div className="container flex justify-between items-center w-full mx-auto">
       <div className="text-white font-semibold text-xl">Galera</div>
       {user ? (
