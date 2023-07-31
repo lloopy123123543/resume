@@ -27,6 +27,7 @@ const Modal: React.FC<ModalProps> = ({
         />
               <Dialog.Content
         className="
+        text-white
         fixed
         drop-shadow-md
         border
@@ -43,18 +44,18 @@ const Modal: React.FC<ModalProps> = ({
         translate-x-[-50%]
         translate-y-[-50%]
         rounded-md
-        bg-neutral-800
+        bg-white
         p-[25px]
         focus:outline-none
         "
       >
-        <Dialog.Title
-        className="text-white text-xl text-center font-bold mt-2">{title}</Dialog.Title>
-        <Dialog.Description className="text-slate-100 font-semibold text-center">{description}</Dialog.Description>
-        <div className="text-center font-bold text-white">{children}</div>
-        <Dialog.Close asChild>
-            <button className="text-white font-bold border-none">close</button>
+        <Dialog.Close asChild className="w-full flex justify-end">
+            <button className="text-black font-bold border-none;">X</button>
         </Dialog.Close>
+        <Dialog.Title
+        className="text-[#F5AE33] text-xl text-center font-bold mt-2">{title}</Dialog.Title>
+        <Dialog.Description className="text-slate-500 font-semibold text-center">{description}</Dialog.Description>
+        <div className="text-center font-bold text-white">{children}</div>
       </Dialog.Content>
       </Dialog.Portal>
 

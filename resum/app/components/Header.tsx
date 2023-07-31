@@ -25,7 +25,8 @@ export default function Header() {
   }
   return (
     <div className=" p-2 bg-sky-600 w-full mx-auto flex justify-between">
-      <div>Logo</div>
+      <div className="container flex justify-between items-center w-full mx-auto">
+      <div className="text-white font-semibold text-xl">Galera</div>
       {user ? (
         <div
          className="flex justify-center items-center gap-5">
@@ -61,6 +62,7 @@ export default function Header() {
         onClick={AuthModal.onOpen}
         >Sign in</div>
       )}
+      </div>
     </div>
   );
 }
