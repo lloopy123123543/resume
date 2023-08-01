@@ -17,7 +17,7 @@
   .gradient {
     z-index: 1;
     width: 100%;
-    background: linear-gradient(113deg, rgb(251, 250, 205) 24.4%, rgb(247, 163, 205) 53.7%, rgb(141, 66, 243) 99.2%);
+    background: radial-gradient(circle at 10% 20%, rgb(255, 229, 168) 0%, rgb(251, 174, 222) 100.7%);
     position: absolute;
     content: "";
     width: 100%;
