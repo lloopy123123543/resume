@@ -20,12 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className } >
+      <body className={font.className}>
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider />
-            <Header></Header>
-            {children}
+
+            <div className="gradient"></div>
+            <main className="main">
+              <Header></Header>
+              {children}
+            </main>
           </UserProvider>
         </SupabaseProvider>
       </body>
