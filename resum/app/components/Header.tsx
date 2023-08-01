@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <div className=" p-2 bg-[#F5AE33] backdrop-blur-sm w-full mx-auto flex justify-between">
       <div className="container flex justify-between items-center w-full mx-auto">
-      <div className="text-white font-semibold text-xl">Galera</div>
+      <div className="text-white font-semibold text-xl"><Link href={"/"}>Galera</Link></div>
       {user ? (
         <div
          className="flex justify-center items-center gap-5">
@@ -43,13 +43,14 @@ export default function Header() {
           ></Image>
           {HeaderMenu && (
             <div className="absolute mt-40 bg-white p-2 rounded-lg grid gap-3">
+                            <Link href={"/profile"}>
+                <div>Profile</div>
+              </Link>
             <div
             className="cursor-pointer"
              onClick={() => handleLogout()}
             >Sign out</div>
-              <Link href={"/sus"}>
-                <div>Lorem</div>
-              </Link>
+
               <Link href={"/sus"}>
                 <div>Lorem</div>
               </Link>
