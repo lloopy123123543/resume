@@ -24,7 +24,6 @@ export default function RootLayout({
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider />
-
             <div className="gradient"></div>
             <main className="main">
               <Header></Header>
