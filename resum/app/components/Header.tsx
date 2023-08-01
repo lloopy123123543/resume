@@ -44,17 +44,13 @@ export default function Header() {
             ></Image>
             {HeaderMenu && (
                   
-              <div className="absolute mt-40 bg-white mr-[120px] sm:mr-[-100px] min-w-[120px] text-center p-2 rounded-lg grid gap-3">
+              <div className="absolute mt-40 bg-white mr-[120px] sm:mr-[-100px] min-w-[120px] text-center p-2 rounded-lg grid gap-3 ">
                 <Link href={"/profile"}>
-                  <div>Profile</div>
+                  <div className="hover:text-[#F5AE33] cursor-pointer">Profile</div>
                 </Link>
-                <div className="cursor-pointer" onClick={() => handleLogout()}>
+                <div className="hover:text-[#F5AE33] cursor-pointer" onClick={() => handleLogout()}>
                   Sign out
                 </div>
-
-                <Link href={"/sus"}>
-                  <div>Lorem</div>
-                </Link>
               </div>
             )}
           </div>
