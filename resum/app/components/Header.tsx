@@ -60,7 +60,7 @@ export default function Header() {
           </div>
         ) : (
           <div
-            className="cursor-pointer hover:text-white"
+            className="cursor-pointer p-2 rounded-md border-white bg-[#F5AE33] hover:text-white"
             onClick={AuthModal.onOpen}
           >
             Sign in
